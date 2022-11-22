@@ -1,0 +1,63 @@
+[tool.poetry]
+name = "pythonproject"
+version = "0.1.0"
+description = ""
+authors = ["rehrler <romehrler@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+matplotlib = "^3.6.2"
+
+[tool.poetry.dev-dependencies]
+black = "^22.3.0"
+coverage = { extras = ["toml"], version = "^6.4.1" }
+unittest-xml-reporting = "^3.2.0"
+pre-commit = "^2.19.0"
+pre-commit-hooks = "^4.2.0"
+pydocstyle = "^6.1.1"
+pylint = "^2.14.1"
+reorder-python-imports = "^3.1.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pylint.main]
+fail-on = "F,E,W"
+fail-under = 0.0
+
+[tool.pylint.basic]
+good-names = ["i", "j", "k", "n", "s", "d", "ex", "Run", "_", "pk", "x", "y", "df"]
+
+[tool.pylint.format]
+max-line-length = 140
+max-args = 8
+
+[tool.pylint.messages_control]
+disable = [
+    "missing-module-docstring",
+    "missing-function-docstring",
+    "missing-class-docstring",
+    "too-few-public-methods",
+    "wrong-import-order",
+    "duplicate-code",
+    "logging-fstring-interpolation"
+]
+enable = [
+    "logging-format-interpolation"
+]
+
+[tool.pylint.miscellaneous]
+notes = []  # don't warn about `TODO` and `FIXME` comments
+
+[tool.pylint.reports]
+output-format = "parseable:pylintout,text"
+
+[tool.pydocstyle]
+match-dir = "[^\\.][^test].*"
+convention = "google"
+
+[tool.coverage.run]
+command_line = "-m xmlrunner discover --output-file junittest.xml"

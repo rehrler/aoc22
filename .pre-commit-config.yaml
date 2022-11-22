@@ -1,0 +1,68 @@
+repos:
+  - repo: local
+    hooks:
+      - id: poetry-check
+        name: poetry-check
+        description: run poetry check to validate config
+        entry: poetry check
+        language: system
+        pass_filenames: false
+        files: (^|/)pyproject.toml$
+
+      - id: trailing-whitespace-fixer
+        name: trailing-whitespace-fixer
+        entry: trailing-whitespace-fixer
+        language: python
+
+      - id: end-of-file-fixer
+        name: end-of-file-fixer
+        entry: end-of-file-fixer
+        language: python
+
+      - id: reorder-python-imports
+        name: reorder-python-imports
+        entry: reorder-python-imports
+        language: python
+        files: '\.py$'
+        args: ['--application-directories', 'src:scripts']
+
+      - id: black
+        name: black
+        entry: black
+        language: python
+        files: '\.py$'
+
+      - id: pydocstyle
+        name: pydocstyle
+        entry: pydocstyle
+        language: python
+        files: '\.py$'
+        exclude: '^scripts\/'
+
+      - id: pylint
+        name: pylint
+        entry: env PYTHONPATH='src/aoc22/:scripts/' pylint
+        language: system
+        require_serial: true
+        types: [python]
+        pass_filenames: false
+        files: '\.py$'
+        args:
+          [
+            'src', 'scripts',
+            '-rn',
+            '-sn',
+          ]
+        verbose: true
+
+      - id: unittest-run
+        name: unittest-run
+        entry: coverage run
+        pass_filenames: false
+        language: system
+
+      - id: unittest-coverage-report
+        name: unittest-coverage-report
+        entry: coverage xml
+        pass_filenames: false
+        language: system
