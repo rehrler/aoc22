@@ -148,6 +148,7 @@ target
 .classpath
 .project
 .idea
+data
 *.iml
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
