@@ -3,3 +3,7 @@
 ### Day 1
 
 easy
+
+### Day 2
+
+easy
