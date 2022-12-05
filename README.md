@@ -15,3 +15,7 @@ easy
 ### Day 4
 
 still easy
+
+### Day 5
+
+hints: stacks, lists, queues
