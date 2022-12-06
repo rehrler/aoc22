@@ -3,7 +3,9 @@ import pandas as pd
 
 
 def read_data():
-    df = pd.read_csv("data/day01.txt", header=None, index_col=None, skip_blank_lines=False)
+    df = pd.read_csv(
+        "data/day01.txt", header=None, index_col=None, skip_blank_lines=False
+    )
     return df
 
 

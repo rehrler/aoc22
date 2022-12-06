@@ -19,3 +19,7 @@ still easy
 ### Day 5
 
 hints: stacks, lists, queues
+
+### Day 6
+
+becoming easier

@@ -2,7 +2,7 @@ import numpy as np
 
 
 def read_stacks():
-    file1 = open('data/day05_1.txt', 'r')
+    file1 = open("data/day05_1.txt", "r")
     lines = file1.readlines()
     spaces = np.arange(1, 34, 4)
     stack = []
@@ -19,7 +19,7 @@ def read_stacks():
 
 
 def read_moves():
-    file = open('data/day05_2.txt', 'r')
+    file = open("data/day05_2.txt", "r")
     lines = file.readlines()
     moves = []
     for line in lines:

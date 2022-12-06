@@ -8,15 +8,17 @@ def read_data():
 
 
 def get_res(row):
-    poss_res = {"AX": 3,
-                "AY": 6,
-                "AZ": 0,
-                "BX": 0,
-                "BY": 3,
-                "BZ": 6,
-                "CX": 6,
-                "CY": 0,
-                "CZ": 3}
+    poss_res = {
+        "AX": 3,
+        "AY": 6,
+        "AZ": 0,
+        "BX": 0,
+        "BY": 3,
+        "BZ": 6,
+        "CX": 6,
+        "CY": 0,
+        "CZ": 3,
+    }
     total_score = poss_res[row["opponent"] + row["answer"]]
     if row["answer"] == "X":
         total_score += 1

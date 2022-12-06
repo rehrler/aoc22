@@ -10,7 +10,8 @@ def read_data():
 
 def check_fully_contained(row):
     fully_contained = (row["low_1"] >= row["low_2"] and row["up_1"] <= row["up_2"]) or (
-            row["low_1"] <= row["low_2"] and row["up_1"] >= row["up_2"])
+        row["low_1"] <= row["low_2"] and row["up_1"] >= row["up_2"]
+    )
     return 1 if fully_contained else 0
 
 
@@ -19,7 +20,9 @@ def part1():
     nb_fully_contained = 0
     for i, row in df.iterrows():
         nb_fully_contained += check_fully_contained(row)
-    print(f"assignment pairs which one range fully contain the other: {nb_fully_contained}")
+    print(
+        f"assignment pairs which one range fully contain the other: {nb_fully_contained}"
+    )
     return 0
 
 

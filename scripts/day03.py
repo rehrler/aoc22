@@ -15,7 +15,7 @@ def get_score(letter: str):
 
 def solve_part1(param: str):
     arr = [char for char in param]
-    bucket1, bucket2 = arr[:int(len(arr) / 2)], arr[int(len(arr) / 2):]
+    bucket1, bucket2 = arr[: int(len(arr) / 2)], arr[int(len(arr) / 2) :]
     equal_item = (set(bucket1) & set(bucket2)).pop()
     return get_score(equal_item)
 
@@ -30,9 +30,11 @@ def part1():
 
 
 def solve_part2(elf_bucket):
-    equal_item = (set([char for char in elf_bucket[0]]) & \
-                  set([char for char in elf_bucket[1]]) & \
-                  set([char for char in elf_bucket[2]])).pop()
+    equal_item = (
+        set([char for char in elf_bucket[0]])
+        & set([char for char in elf_bucket[1]])
+        & set([char for char in elf_bucket[2]])
+    ).pop()
     return get_score(equal_item)
 
 
