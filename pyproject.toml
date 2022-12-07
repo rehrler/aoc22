@@ -9,6 +9,7 @@ readme = "README.md"
 python = "^3.10"
 matplotlib = "^3.6.2"
 pandas = "^1.5.2"
+treelib = "^1.6.1"
 
 [tool.poetry.dev-dependencies]
 black = "^22.3.0"

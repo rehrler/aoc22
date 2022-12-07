@@ -23,3 +23,8 @@ hints: stacks, lists, queues
 ### Day 6
 
 becoming easier
+
+### Day 7
+
+harder
+hints: trees, and use a fu**ing identifier for each node
