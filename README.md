@@ -28,3 +28,7 @@ becoming easier
 
 harder
 hints: trees, and use a fu**ing identifier for each node
+
+### Day 8
+
+array indice struggle

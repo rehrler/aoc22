@@ -1,5 +1,6 @@
-import numpy as np
 import uuid
+
+import numpy as np
 
 
 def read_data():
@@ -26,7 +27,12 @@ def read_data():
 
 class Node:
     def __init__(self, typ: str, name: str, identifier: uuid.UUID, size: float = 0):
-        self._type, self._name, self._identifier, self._size = typ, name, identifier, size
+        self._type, self._name, self._identifier, self._size = (
+            typ,
+            name,
+            identifier,
+            size,
+        )
         self._children = []
 
     def add_child(self, node: "Node", parent: uuid.UUID):

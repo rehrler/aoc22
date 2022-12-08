@@ -10,7 +10,7 @@ def read_data():
 def check_for_packet(packet, length):
     for i in range(len(packet) - length + 1):
         if i > 0:
-            new_packet = packet[i:i + length]
+            new_packet = packet[i : i + length]
             packets = set(new_packet)
             if len(packets) == length:
                 print(f"found valid packet at {i + length}")
