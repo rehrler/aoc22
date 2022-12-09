@@ -31,4 +31,17 @@ hints: trees, and use a fu**ing identifier for each node
 
 ### Day 8
 
-array indice struggle
+array indices struggle
+
+### Day 9
+
+try to understand the movement behaviour of the knots and isolate the cases
+
+What happens if
+
+* the head and tail overlap
+* the tail is 1 up/down/left/right w.r.t. the head
+* the tail is 1 diagonal w.r.t. the head
+* the head 2 up/down/left/right w.r.t. the tail
+* the head 1 up/down/left/right and 2 up/down/left/right w.r.t. the tail
+* part2: the head 2 up/down/left/right and 2 up/down/left/right w.r.t. the tail

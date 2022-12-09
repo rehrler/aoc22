@@ -2,7 +2,7 @@ import numpy as np
 
 
 def read_data():
-    return np.genfromtxt('data/day08.txt', delimiter=1, dtype=int)
+    return np.genfromtxt("data/day08.txt", delimiter=1, dtype=int)
 
 
 def check_vis(row, col, i, j):
@@ -46,16 +46,16 @@ def calc_vis_trees(sub_row_col):
 def calc_score(candidate, field):
     row, col = field[candidate[0], :], field[:, candidate[1]]
     # going left
-    sub_row_left = np.flip(row[:candidate[1] + 1])
+    sub_row_left = np.flip(row[: candidate[1] + 1])
     score_left = calc_vis_trees(sub_row_left)
     # going right
-    sub_row_right = row[candidate[1]:]
+    sub_row_right = row[candidate[1] :]
     score_right = calc_vis_trees(sub_row_right)
     # going up
-    sub_col_up = np.flip(col[:candidate[0] + 1])
+    sub_col_up = np.flip(col[: candidate[0] + 1])
     score_up = calc_vis_trees(sub_col_up)
     # going down
-    sub_col_down = col[candidate[0]:]
+    sub_col_down = col[candidate[0] :]
     score_down = calc_vis_trees(sub_col_down)
     return score_left * score_right * score_up * score_down
 
@@ -66,7 +66,12 @@ def part1_2():
     candidates = []
     for i in range(field.shape[0]):
         for j in range(field.shape[1]):
-            if i != 0 and i != field.shape[0] - 1 and j != 0 and j != field.shape[1] - 1:
+            if (
+                i != 0
+                and i != field.shape[0] - 1
+                and j != 0
+                and j != field.shape[1] - 1
+            ):
                 visibility = check_vis(field[i, :], field[:, j], i, j)
                 visible += visibility
                 if visibility == 1:
