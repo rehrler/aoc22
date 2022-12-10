@@ -45,3 +45,7 @@ What happens if
 * the head 2 up/down/left/right w.r.t. the tail
 * the head 1 up/down/left/right and 2 up/down/left/right w.r.t. the tail
 * part2: the head 2 up/down/left/right and 2 up/down/left/right w.r.t. the tail
+
+### Day 10
+
+easy

@@ -31,8 +31,12 @@ def move_t(h_pos, t_pos):
         return t_pos
     elif abs(diff_i) + abs(diff_j) == 1:  # case up, down, right, left by 1
         return t_pos
-    elif (diff_i == 1 and diff_j == 1) or (diff_i == 1 and diff_j == -1) or (diff_i == -1 and diff_j == -1) or (
-            diff_i == -1 and diff_j == 1):  # case diagonal
+    elif (
+        (diff_i == 1 and diff_j == 1)
+        or (diff_i == 1 and diff_j == -1)
+        or (diff_i == -1 and diff_j == -1)
+        or (diff_i == -1 and diff_j == 1)
+    ):  # case diagonal
         return t_pos
     # case need to move
     if diff_i == -2 and diff_j == 0:  # case h 2 down
