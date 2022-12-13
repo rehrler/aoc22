@@ -57,3 +57,7 @@ think about how you can reduce the worry rate such that the numbers are not goin
 ### Day 12
 
 lazy Label Correcting Algorithm (sorry for part 2)
+
+### Day 13
+
+part1 recursion and part2 sorting algorithm
