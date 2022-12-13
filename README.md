@@ -53,3 +53,7 @@ easy
 ### Day 11
 
 think about how you can reduce the worry rate such that the numbers are not going to large
+
+### Day 12
+
+lazy Label Correcting Algorithm (sorry for part 2)
