@@ -61,3 +61,7 @@ lazy Label Correcting Algorithm (sorry for part 2)
 ### Day 13
 
 part1 recursion and part2 sorting algorithm
+
+### Day 14
+
+not efficient, but a standard simulation

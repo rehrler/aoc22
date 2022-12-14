@@ -2,16 +2,16 @@ import numpy as np
 
 
 def read_data():
-    lines = open("data/day12.txt", "r").read().split("\n")
-    field = []
-    for line in lines:
-        new_row = [ord(char) - 96 for char in line]
-        field.append(new_row)
-    new_field = np.zeros((len(field), len(field[0])))
-    for i in range(len(field)):
-        for j in range(len(field[0])):
-            new_field[i, j] = field[i][j]
-    return new_field
+    with open("data/day12.txt", "r").read().split("\n") as lines:
+        field = []
+        for line in lines:
+            new_row = [ord(char) - 96 for char in line]
+            field.append(new_row)
+        new_field = np.zeros((len(field), len(field[0])))
+        for i in range(len(field)):
+            for j in range(len(field[0])):
+                new_field[i, j] = field[i][j]
+        return new_field
 
 
 def get_node(field, node: int):
