@@ -65,3 +65,7 @@ part1 recursion and part2 sorting algorithm
 ### Day 14
 
 not efficient, but a standard simulation
+
+### Day 15
+
+try to understand how the :small_blue_diamond: looks based on the sensor beacon relation
